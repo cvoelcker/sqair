@@ -25,9 +25,9 @@
 """
 import tensorflow as tf
 
-import index
-import ops
-import targets
+from . import index
+from . import ops
+from . import targets
 
 
 class Model(object):

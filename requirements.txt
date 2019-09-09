@@ -4,4 +4,7 @@ dm_sonnet==1.14
 attrdict==2.0.0
 scipy==0.18.1
 orderedattrdict==1.5
-#tensorflow==1.6.0
+tensorflow==1.6.0
+tensorflow-gpu==1.6.0
+Pillow
+tqdm

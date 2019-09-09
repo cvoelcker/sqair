@@ -88,7 +88,7 @@ def load(batch_size, n_timesteps=None):
         tf.summary.scalar('seq_len', stage_seq_len)
 
         for d in (train_tensors, valid_tensors):
-            for k, v in d.iteritems():
+            for k, v in d.items():
                 d[k] = dynamic_truncate(v, stage_seq_len)
 
     data_dict = AttrDict(

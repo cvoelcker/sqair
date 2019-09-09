@@ -27,7 +27,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.python.util import nest
 
-from ops import broadcast_against
+from .ops import broadcast_against
 
 
 def sample_from_1d_tensor(arr, idx):
@@ -188,7 +188,7 @@ def select_present_nested(tensors, presence, batch_size=None, name='select_prese
         merged = select_present(merged, presence, batch_size)
         tensors = []
 
-        for i in xrange(len(lens) - 1):
+        for i in range(len(lens) - 1):
             st, ed = lens[i], lens[i + 1]
             tensors.append(merged[..., st:ed])
 

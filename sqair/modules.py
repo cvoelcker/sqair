@@ -32,8 +32,8 @@ from tensorflow.contrib.resampler import resampler as tf_resampler
 
 import sonnet as snt
 
-from neural import MLP, ConvNet
-import ops
+from .neural import MLP, ConvNet
+from . import ops
 
 
 class GaussianFromParamVec(snt.AbstractModule):
@@ -574,12 +574,12 @@ class RecurrentNormalImpl(snt.AbstractModule):
             state = tf.concat((state, conditioning), -1)
             state = self._cond_state(state)
 
-        outputs = [[] for _ in xrange(4)]
+        outputs = [[] for _ in range(4)]
         if override_samples is not None:
             override_samples = tf.unstack(override_samples, axis=-2)
             seq_len = len(override_samples)
 
-        for i in xrange(seq_len):
+        for i in range(seq_len):
 
             if override_samples is None:
                 override_sample = None

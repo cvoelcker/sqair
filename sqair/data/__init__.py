@@ -21,4 +21,4 @@
 # 
 ########################################################################################
 
-from data import load_data, tensors_from_data, MNIST
+from .data import load_data, tensors_from_data, MNIST
